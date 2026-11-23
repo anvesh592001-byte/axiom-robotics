@@ -49,6 +49,25 @@
 
 html {
   scroll-behavior: auto;
+  /* the page scrolls on Lenis (JS), so the native right-hand scrollbar is only
+     a duplicate affordance — hide it and keep the full-bleed field edge to edge.
+     Scrolling itself is unaffected: wheel, trackpad, touch, keys and the nav
+     links all still work. Inner panels (.explore__panel, .specs__table) keep
+     their own slim scrollbars since those are real overflow areas. */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* legacy Edge / IE */
+}
+
+html::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  display: none;
+}
+
+body::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  display: none;
 }
 
 html,
