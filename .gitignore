@@ -1,0 +1,8 @@
+node_modules
+dist
+.cache
+.npm
+.DS_Store
+*.log
+shots
+uploads
