@@ -7,6 +7,7 @@ import CameraRig from './CameraRig'
 import RobotModel from './RobotModel'
 import StudioGrid from './StudioGrid'
 import Lab3D from './Lab3D'
+import Bubbles from './Bubbles'
 import PostFX from './PostFX'
 import { sceneBridge } from './sceneBridge'
 
@@ -27,6 +28,7 @@ function SceneContents({ quality }) {
       <CameraRig robotRef={robotRef} />
       <Lab3D quality={quality} />
       <StudioGrid />
+      <Bubbles />
       <Suspense fallback={null}>
         <RobotModel groupRef={robotRef} />
       </Suspense>
